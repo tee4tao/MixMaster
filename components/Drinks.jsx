@@ -3,8 +3,9 @@ import React, {useEffect, useState} from 'react'
 import Article from './Article'
 import { useGlobalContext } from '@/app/providers'
 
-const Drinks = ({data}) => {
-    // const [drinks, setDrinks] = useState(data.drinks)
+const Drinks = ({data, searchTerm}) => {
+  searchTerm = `whiskey`
+  // console.log(searchTerm);
     const {drinks, setDrinks} = useGlobalContext();
     // setDrinks(data.drinks);
     // console.log(drinks);

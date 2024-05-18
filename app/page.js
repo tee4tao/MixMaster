@@ -1,14 +1,13 @@
 import Drinks from "@/components/Drinks";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { useGlobalContext } from "./providers";
-// const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
-const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 
-// const {test} = useGlobalContext();
+// const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
+let searchTerm = ''
+const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`
+
 const fetchDrinks = async () => {
   const resp = await fetch(url);
-  console.log(resp);
   if (!resp.ok) {
     throw new Error(`Something went wrong, ${resp.status}`);
   }
@@ -18,10 +17,9 @@ const fetchDrinks = async () => {
 
 const Home= async() => {
 const data = await fetchDrinks();
-// console.log(data);
   return (
     <main className="flex flex-col container w-screen items-center p-24">
-      <Drinks data={data} />
+      <Drinks data={data} searchTerm={searchTerm} />
     </main>
   );
 }
