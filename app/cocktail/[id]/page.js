@@ -25,7 +25,7 @@ const page = async({params}) => {
       <h1 className="text-4xl font-bold">Cocktail</h1>
       </div>
       <div className="flex flex-col items-center md:flex-row max-w-4xl">
-        <Image src={data.drinks[0].strDrinkThumb} alt={data.drinks[0].strDrink} width={300} height={300} className="w-full object-cover rounded-md md:h-96 md:w-96" priority />
+        <Image src={data.drinks[0].strDrinkThumb} alt={data.drinks[0].strDrink} width={300} height={300} className="w-full object-cover rounded-md md:h-96 md:w-96 mb-9" priority />
         <div className="flex items-start flex-col md:ml-6 space-y-2 md:h-96 md:justify-center md:space-y-6">
         <p><span className='bg-white text-black inline-block px-1 text-center rounded-md mr-2'>Name:  </span> <span className='font-bold'>{data.drinks[0].strDrink}</span></p>
         <p><span className='bg-white text-black inline-block px-1 text-center rounded-md mr-2'>Glass:  </span><span>{data.drinks[0].strGlass}</span></p>

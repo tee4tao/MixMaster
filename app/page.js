@@ -1,8 +1,11 @@
 import Drinks from "@/components/Drinks";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
+import { useGlobalContext } from "./providers";
+// const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
+const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 
+// const {test} = useGlobalContext();
 const fetchDrinks = async () => {
   const resp = await fetch(url);
   console.log(resp);
