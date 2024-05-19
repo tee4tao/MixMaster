@@ -9,8 +9,7 @@ const singleDrink = async (id) => {
 }
 
 const page = async({params}) => {
-    const data = await singleDrink(params.id);
-    // console.log(data.drinks[0]);  
+    const data = await singleDrink(params.id); 
     const ingredients = [
       data.drinks[0].strIngredient1,
       data.drinks[0].strIngredient2,
