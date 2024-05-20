@@ -1,7 +1,7 @@
 'use client'
 import React,{useEffect, useRef, useState} from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation' // usePathname is a Client Component hook that lets you read the current URL's pathname.
 
 const SearchForm = () => {
     let refContainer = useRef(null);
@@ -49,7 +49,7 @@ const SearchForm = () => {
             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
           />
         </svg>
-      </Link>}
+      </Link>} {/* if the input value is not empty, when search btn is clicked, it goes to the route where it will display the searched items. If the input value of empty, hence it is falsy and it will just remain in the current route when we click on the search btn(that's the function of usePathename()) */}
     </form>
   )
 }
