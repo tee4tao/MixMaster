@@ -17,7 +17,7 @@ const SearchForm = () => {
       },[])
   return (
     <form className='bg-white mb-8 h-12 flex items-center justify-center shadow-2xl max-w-xl mx-auto rounded w-full' onSubmit={handleSubmit}>
-    <input type="text" className=' bg-gray-200 w-4/5 h-1/2 text-black' ref={refContainer} /*onChange={(e) => setSearchTerm(e.target.value)}*/ onChange={searchCocktail} />
+    <input type="text" className=' bg-gray-200 w-4/5 h-1/2 text-black ml-4' ref={refContainer} /*onChange={(e) => setSearchTerm(e.target.value)}*/ onChange={searchCocktail} />
     <Link href={`/search/${inputValue}`} type='submit' className="btn btn-ghost btn-circle">
         <svg
           xmlns="http://www.w3.org/2000/svg"

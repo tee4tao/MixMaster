@@ -17,7 +17,7 @@ const Home= async() => {
   // console.log(searchTerm);
 const data = await fetchDrinks();
   return (
-    <main className="flex flex-col container w-screen items-center p-24">
+    <main className="flex flex-col container w-screen items-center p-8">
       <Drinks data={data}  />
     </main>
   );

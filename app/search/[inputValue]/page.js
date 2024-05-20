@@ -24,7 +24,7 @@ const page = async({params}) => {
     </section>)
   }
   return (
-    <main className='flex flex-col container w-screen items-center p-24'>
+    <main className='flex flex-col container w-screen items-center p-8'>
       <SearchForm/>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 w-full">{drinks.map((drink)=>{
       return <Article key={drink.idDrink} {...drink}/>
